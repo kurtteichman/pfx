@@ -16,11 +16,10 @@ Please generate new <PFx> for the <Incidental Finding>
 Output should be formatted as a json with the following attributes/fields: finding, ICD10_code, PFx, PFx_ICD10_code
 
 Additional Instructions:
-1. Please follow the style. tone, and grade-level of these PFx as closely as possible based on <Examples>
-2. Do not suggest follow-up steps with the doctor.
-3. Use the patient friendly explanation sentences to determine a PFx ICD-10 code.
-4. Please generate PFx at a {Reading_Level} Flesch-Kincaid reading level.
-5. Please output PFx in 100 words or more.
+1. Do not suggest follow-up steps with the doctor.
+2. Use the patient friendly explanation sentences to determine a PFx ICD-10 code.
+3. Please generate PFx at a {Reading_Level} Flesch-Kincaid reading level.
+4. Please output PFx in 100 words or more.
 
 </Prompt>
 
@@ -36,11 +35,10 @@ Please generate a new <PFx> for the <Incidental Finding>
 Output should be formatted as a json with the following attributes/fields: finding, ICD10_code, PFx, PFx_ICD10_code
 
 Additional Instructions:
-1. Please follow the style. tone, and grade-level of these PFx as closely as possible based on <Examples>
-2. Do not suggest follow-up steps with the doctor.
-3. Use the patient friendly explanation sentences to determine a PFx ICD-10 code.
-4. Please generate PFx at a {Reading_Level} Flesch-Kincaid reading level.
-5. Please output PFx in 100 words or more.
+1. Do not suggest follow-up steps with the doctor.
+2. Use the patient friendly explanation sentences to determine a PFx ICD-10 code.
+3. Please generate PFx at a {Reading_Level} Flesch-Kincaid reading level.
+4. Please output PFx in 100 words or more.
 
 </Prompt>
 
