@@ -50,7 +50,7 @@ Additional Instructions:
     ```{{"Incidental_Finding":"{Incidental_Finding}", "ICD10_code":"{ICD10_code}", "PFx":"{PFx}", "PFx_ICD10_code":"{PFx_ICD10_code}"}}```
 </PFx>
 
-The PFx above was at a {0_reading_level} instead of a {Reading_Level} Flesch-Kincaid reading level. Please try again.
+The PFx above was at a {_0_reading_level} instead of a {Reading_Level} Flesch-Kincaid reading level. Please try again.
 
 Please generate a new <PFx> for the <Incidental Finding>
 
@@ -130,6 +130,11 @@ icd10_example = PromptTemplate(
 baseline_zeroshot_prompt = PromptTemplate(
                         input_variables=["Incidental_Finding"],
                         template = BASELINE_ZEROSHOT_INSTRUCTION,
+                        )
+
+zeroshot_prompt_reflexion_reading_level_error = PromptTemplate(
+                        input_variables=["Incidental_Finding","ICD10_code","PFx","PFx_ICD10_code"],
+                        template = ZEROSHOT_INSTRUCTION_WITH_REFLEXION_READING_LEVEL,
                         )
 
 baseline_fewshot_prompt = PromptTemplate(
