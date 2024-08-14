@@ -19,7 +19,8 @@ Additional Instructions:
 1. Please follow the style. tone, and grade-level of these PFx as closely as possible based on <Examples>
 2. Do not suggest follow-up steps with the doctor.
 3. Use the patient friendly explanation sentences to determine a PFx ICD-10 code.
-4. Please output PFx in 100 words or more.
+4. Please generate PFx in a {Reading_Level}
+5. Please output PFx in 100 words or more.
 
 </Prompt>
 
@@ -37,7 +38,8 @@ Additional Instructions:
 1. Please follow the style. tone, and grade-level of these PFx as closely as possible based on <Examples>
 2. Do not suggest follow-up steps with the doctor.
 3. Use the patient friendly explanation sentences to determine a PFx ICD-10 code.
-4. Please output PFx in 100 words or more.
+4. Please generate PFx in a {Reading_Level}
+5. Please output PFx in 100 words or more.
 
 </Prompt>
 
