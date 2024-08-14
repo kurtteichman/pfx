@@ -5,7 +5,7 @@ EXAMPLE = """<Incidental Finding>
 </Incidental Finding>
 
 <PFx>
-```{{"finding":"{Incidental_Finding}", "ICD10_code":"{ICD10_code}", "PFx":"{PFx}", "PFx_ICD10_code":"{PFx_ICD10_code}"}}```
+```{{"Incidental_Finding":"{Incidental_Finding}", "ICD10_code":"{ICD10_code}", "PFx":"{PFx}", "PFx_ICD10_code":"{PFx_ICD10_code}"}}```
 </PFx>
 
 """
@@ -19,7 +19,50 @@ Additional Instructions:
 1. Please follow the style. tone, and grade-level of these PFx as closely as possible based on <Examples>
 2. Do not suggest follow-up steps with the doctor.
 3. Use the patient friendly explanation sentences to determine a PFx ICD-10 code.
-4. Please generate PFx in a {Reading_Level}
+4. Please generate PFx at a {Reading_Level} Flesch-Kincaid reading level.
+5. Please output PFx in 100 words or more.
+
+</Prompt>
+
+<Incidental Finding>
+{Incidental_Finding}
+</Incidental Finding>
+"""
+
+#TODO
+ZEROSHOT_INSTRUCTION_WITH_REFLEXION_READING_LEVEL = """<Prompt>
+Please generate a new <PFx> for the <Incidental Finding>
+
+Output should be formatted as a json with the following attributes/fields: finding, ICD10_code, PFx, PFx_ICD10_code
+
+Additional Instructions:
+1. Please follow the style. tone, and grade-level of these PFx as closely as possible based on <Examples>
+2. Do not suggest follow-up steps with the doctor.
+3. Use the patient friendly explanation sentences to determine a PFx ICD-10 code.
+4. Please generate PFx at a {Reading_Level} Flesch-Kincaid reading level.
+5. Please output PFx in 100 words or more.
+
+</Prompt>
+
+<Incidental Finding>
+{Incidental_Finding}
+</Incidental Finding>
+
+<PFx>
+    ```{{"Incidental_Finding":"{Incidental_Finding}", "ICD10_code":"{ICD10_code}", "PFx":"{PFx}", "PFx_ICD10_code":"{PFx_ICD10_code}"}}```
+</PFx>
+
+The PFx above was at a {0_reading_level} instead of a {Reading_Level} Flesch-Kincaid reading level. Please try again.
+
+Please generate a new <PFx> for the <Incidental Finding>
+
+Output should be formatted as a json with the following attributes/fields: finding, ICD10_code, PFx, PFx_ICD10_code
+
+Additional Instructions:
+1. Please follow the style. tone, and grade-level of these PFx as closely as possible based on <Examples>
+2. Do not suggest follow-up steps with the doctor.
+3. Use the patient friendly explanation sentences to determine a PFx ICD-10 code.
+4. Please generate PFx at a {Reading_Level} Flesch-Kincaid reading level.
 5. Please output PFx in 100 words or more.
 
 </Prompt>
@@ -38,7 +81,7 @@ Additional Instructions:
 1. Please follow the style. tone, and grade-level of these PFx as closely as possible based on <Examples>
 2. Do not suggest follow-up steps with the doctor.
 3. Use the patient friendly explanation sentences to determine a PFx ICD-10 code.
-4. Please generate PFx in a {Reading_Level}
+4. Please generate PFx at a {Reading_Level} Flesch-Kincaid reading level.
 5. Please output PFx in 100 words or more.
 
 </Prompt>
