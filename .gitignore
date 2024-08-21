@@ -2,4 +2,3 @@
 pfx_venv/
 __pycache__/
 .ipynb_checkpoints/
-.env
